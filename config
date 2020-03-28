@@ -98,6 +98,7 @@ set $workspace2 "2: Terminals"
 set $workspace3 "3: "
 set $workspace4 "4: "
 set $workspace5 "5: "
+set $workspace6 "6: gitk"
 set $workspace8 "8: Diff"
 set $workspace10 "10: "
 
@@ -107,7 +108,7 @@ bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace $workspace5
-bindsym $mod+6 workspace 6
+bindsym $mod+6 workspace $workspace6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace 9
@@ -139,6 +140,7 @@ bindsym $mod+Ctrl+less  move workspace to output right
 assign [class="Google-chrome"] $workspace5
 assign [class="Microsoft Teams - Preview"] $workspace3
 assign [class="Code"] $workspace4
+assign [class="Gitk"] $workspace6
 assign [class="Kdiff3"] $workspace8
 assign [class="Diffuse"] $workspace8
 for_window [class="Spotify"] move to workspace $workspace10
