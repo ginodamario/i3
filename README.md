@@ -26,6 +26,12 @@ My configuration for the i3wm using Ubuntu 18.04
       
       sudo apt install i3blocks
       
+- Install **arandr**. This configures the displays
+    - Open and "Save As" once you configure the display like you want.
+    - Open the file and copy the xrandr command to the ~/.config/i3/config file.
+
+            sudo apt install arandr
+      
  - Install font awesome from here: https://github.com/FortAwesome/Font-Awesome/releases
 Unzip zip file and copy .ttf files to ~/.fonts
  
