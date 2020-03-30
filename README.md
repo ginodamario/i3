@@ -42,3 +42,5 @@ Unzip zip file and copy .ttf files to ~/.fonts
 - Put this repo in ~/.config/i3 after install i3
 
     sudo apt install i3
+    
+- Use **xset** to set power management stuff like screensaver timeout
