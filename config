@@ -236,3 +236,4 @@ exec_always xrandr --output VIRTUAL1 --off --output eDP1 --mode 1920x1080 --pos 
 exec redshift
 exec compton
 exec dropbox -i start
+exec xinput set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "Synaptics Finger" 100 110 255
