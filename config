@@ -152,6 +152,7 @@ assign [class="Gitk"] $workspace6
 assign [class="Kdiff3"] $workspace7
 assign [class="Diffuse"] $workspace7
 for_window [class="Spotify"] move to workspace $workspace10
+for_window [title="Microsoft Teams Notification"] floating enable
 
 #for_window [class="Teams"] floating enable
 
