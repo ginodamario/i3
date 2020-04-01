@@ -151,6 +151,7 @@ assign [class="Code"] $workspace4
 assign [class="Gitk"] $workspace6
 assign [class="Kdiff3"] $workspace7
 assign [class="Diffuse"] $workspace7
+assign [class="Wine"] $workspace9
 for_window [class="Spotify"] move to workspace $workspace10
 for_window [title="Microsoft Teams Notification"] floating enable
 
@@ -216,6 +217,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
+# Screen Shots
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+bindsym Control+Print exec gnome-screenshot -I
 
 # Suspend
 bindsym $mod+ctrl+s exec i3lock && systemctl suspend
