@@ -142,8 +142,10 @@ workspace $workspace8 output $seconardy-disp
 workspace $workspace9 output $primary-disp
 workspace $workspace10 output $primary-disp
 
-bindsym $mod+Ctrl+greater move workspace to output left
-bindsym $mod+Ctrl+less  move workspace to output right
+bindsym $mod+Ctrl+l move workspace to output left
+bindsym $mod+Ctrl+h move workspace to output right
+bindsym $mod+Ctrl+k move workspace to output up
+bindsym $mod+Ctrl+j move workspace to output down
 
 assign [class="Google-chrome"] $workspace5
 assign [class="Microsoft Teams - Preview"] $workspace3
