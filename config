@@ -208,8 +208,8 @@ for_window [class="X-terminal-emulator" title="Termfloat"] floating enable
 bindsym $mod+t exec --no-startup-id terminator -l KJ -T "Termfloat"
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl s +100 # increase screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl s 100- # decrease screen brightness
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
