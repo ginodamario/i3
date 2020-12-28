@@ -242,3 +242,5 @@ exec redshift
 exec compton
 exec dropbox -i start
 exec xinput set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "Synaptics Finger" 100 110 255
+
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secret
