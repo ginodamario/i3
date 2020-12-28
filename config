@@ -152,6 +152,9 @@ assign [class="Gitk"] $workspace6
 assign [class="Kdiff3"] $workspace7
 assign [class="Diffuse"] $workspace7
 assign [class="Wine"] $workspace9
+for_window [title="Android Emulator"] move to workspace $workspace9
+for_window [title="Android Emulator"] floating enable
+for_window [title="Emulator"] move to workspace $workspace9
 for_window [class="Spotify"] move to workspace $workspace10
 for_window [title="Microsoft Teams Notification"] floating enable
 
