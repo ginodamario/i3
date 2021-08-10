@@ -90,7 +90,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+b focus child
 
 # switch to workspace
 set $workspace1 "1: Terminals"
@@ -200,7 +200,19 @@ bindsym $mod+o resize grow width 10 px or 10 ppt
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    colors {
+            # bar background color
+            background $bg
+            # text color used for blocks that do not have a color specified.
+            statusline $yellow
+            # workspaces section            
+            #                    border  backgr. text
+            focused_workspace    $aqua $aqua $darkgray
+            inactive_workspace   $darkgray $darkgray $yellow
+            active_workspace     $darkgray $darkgray $yellow
+            urgent_workspace     $red $red $bg
+        }
 }
 
 for_window [class="X-terminal-emulator" title="Termfloat"] floating enable
@@ -226,7 +238,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 
 # Screen Shots
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
-bindsym Control+Print exec gnome-screenshot -i
+bindsym ctrl+Print exec gnome-screenshot -i
 
 # Suspend
 bindsym $mod+ctrl+s exec i3lock && systemctl suspend
@@ -246,3 +258,32 @@ bindsym $mod+shift+d exec xrandr --output HDMI-2 --off --output HDMI-1 --mode 19
 
 exec redshift
 exec compton
+
+# set primary gruvbox colorscheme colors
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
+
+#start of window title bars & borders section
+
+# green gruvbox
+# class                 border|backgr|text|indicator|child_border
+#client.focused          $green $green $darkgray $purple $darkgray
+#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+#client.urgent           $red $red $white $red $red
+
+# blue gruvbox
+# class                 border|backgr|text|indicator|child_border
+client.focused          $blue $blue $darkgray $purple $darkgray
+client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+client.urgent           $red $red $white $red $red
+
+#end of window title bars & borders section
